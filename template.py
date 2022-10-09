@@ -1,5 +1,7 @@
 from docx import Document
-from globals import Templates
+#from globals import Templates
+from json import loads , dump
+
 
 def renderTemplate(templateId,data,outputFileName):
 		doc = Document('projectTemplates/'+templateId+'.docx')
@@ -9,4 +11,11 @@ def renderTemplate(templateId,data,outputFileName):
 					para.text = para.text.replace(f'%{key}%',value)
 		doc.save('outputs/'+outputFileName)
 		
-renderTemplate('phy0001',{},'dog')
+def getTemplates():
+	templates = []
+	with open('templateSchema.txt','rt') as file:
+		temRaw = file.read().split('\n\n')
+		for temp in temRaw:
+			temp = temp.split('\n')
+			templates.append({'id':temp[0],'name':temp[1],'author':temp[2],'pageCount':temp[3],'tag':temp[4]})
+		return templates

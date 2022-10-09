@@ -1,17 +1,17 @@
 from flask import Flask , send_file ,request ,render_template
 from flask_cors import CORS
 import os
-from template import renderTemplate
+from template import renderTemplate, getTemplates
 from analytics import record
 from random import randint
-from globals import Templates
+
 app = Flask('Guruji Backend')
 CORS(app)
 garbageList = []
 
 @app.route('/')
 def home():
-	return render_template('index.html',temps=Templates)
+	return render_template('index.html',temps=getTemplates())
 
 @app.route('/api/generate/<templateId>')
 def generateFromTemplate(templateId):

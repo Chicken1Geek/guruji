@@ -1,7 +1,4 @@
 from docx import Document
-#from globals import Templates
-from json import loads , dump
-
 
 def renderTemplate(templateId,data,outputFileName):
 		doc = Document('projectTemplates/'+templateId+'.docx')

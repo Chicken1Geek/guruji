@@ -67,7 +67,7 @@
                 <div class="card-title h4">
                     Project Templates
                 </div>
-                <div id="templatesList">
+                <div id="templatesList" style="max-height:50vh;overflow-hidden;overflow-y:scroll">
                     {% for temp in temps %}
                     <div class="card mb-3">
                         <div class="card-body">
@@ -81,7 +81,7 @@
                             <div class="row">
                                 <span class="text-muted small"> {{temp.pageCount}} pages</span>
                             </div>
-                            <span class="badge bg-dark h6">{{temp.tag}}</span>
+                            <span class="badge bg-{{temp.data.bg}} h6">{{temp.tag}}</span>
                             <span class="badge bg-primary h6">{{temp.id}}</span>
                         </div>
                     </div>

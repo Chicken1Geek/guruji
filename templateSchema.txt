@@ -1,29 +1,41 @@
+sathvik
+Medicine Stock Checking System
+Sachin Sankar
+31
+Computer Science
+bg:danger,child:phy0001.docx
+
 phy0001
 Applications of electromagnetic principles in modern weapon system.
 Sachin Sankar
 18
 Physics
+bg:success
 
 phy0002
 Finding refractive index of water and oil using a eqiconvex lens and object needle.
 Dhaknesh Raj
 11
 Physics
+bg:success
 
 phy0003
 Study of viscosity of different engine oils.
 Sachin Sankar
 11
 Physics
+bg:success
 
 phy0004
 Study of voltage to turns ratio on a self designed transformer.
 Dharaneesh Nandhakumar
 10
 Physics
+bg:success
 
 chemcola
 Determination of content of cold drinks
 Dharani IS
 16
 Chemistry
+bg:info

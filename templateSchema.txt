@@ -3,7 +3,7 @@ Medicine Stock Checking System
 Sachin Sankar
 31
 Computer Science
-bg:danger,child:phy0001.docx
+bg:danger,child:medicineStock.py
 
 phy0001
 Applications of electromagnetic principles in modern weapon system.

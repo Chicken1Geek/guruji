@@ -16,8 +16,8 @@ def record(name):
 	except KeyError:
 		db['fileCount'] = 1
 	try:
-		db['names'].append(name)
+		db['stats'].append(name)
 	except:
-		db['names'] = [name]
+		db['stats'] = [name]
 	dumpDatabase(db)
 	

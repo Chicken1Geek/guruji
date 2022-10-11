@@ -17,5 +17,10 @@ def getTemplates():
 		temRaw = file.read().split('\n\n')
 		for temp in temRaw:
 			temp = temp.split('\n')
-			templates.append({'id':temp[0],'name':temp[1],'author':temp[2],'pageCount':temp[3],'tag':temp[4]})
+			dataList = temp[5].split(',')
+			data = {}
+			for i in dataList:
+				i = i.split(':')
+				data[i[0]] = i[1]
+			templates.append({'id':temp[0],'name':temp[1],'author':temp[2],'pageCount':temp[3],'tag':temp[4],'data':data})
 		return templates

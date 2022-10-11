@@ -1,3 +1,10 @@
+sathvik
+Medicine Stock Checking System
+Sachin Sankar
+31
+Computer Science
+bg:danger,child:phy0001.docx
+
 phy0001
 Applications of electromagnetic principles in modern weapon system.
 Sachin Sankar
@@ -32,10 +39,3 @@ Dharani IS
 16
 Chemistry
 bg:info
-
-sathvik
-Medicine Stock Checking System
-Sachin Sankar
-31
-Computer Science
-bg:danger,child:phy0001.docx

@@ -3,17 +3,25 @@
     "__pycache__/template.cpython-38.pyc": [
       {
         "id": "e82f3556-94c7-4bb6-9ad4-d666bca1f024",
-        "line": 6,
-        "version": 1,
-        "index": 478
+        "line": 2,
+        "version": 2,
+        "index": 9
       }
     ],
     "analytics.json": [
       {
         "id": "0f2d100d-146f-4002-a709-d4fd04aff996",
         "line": 1,
-        "version": 1,
+        "version": 2,
         "index": 0
+      }
+    ],
+    "templateSchema.txt": [
+      {
+        "id": "69dd373b-361d-4db0-bcd4-1a477ee8c228",
+        "line": 14,
+        "version": 330,
+        "index": 227
       }
     ]
   }

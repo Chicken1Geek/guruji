@@ -1,0 +1,20 @@
+{
+  "files": {
+    "__pycache__/template.cpython-38.pyc": [
+      {
+        "id": "e82f3556-94c7-4bb6-9ad4-d666bca1f024",
+        "line": 6,
+        "version": 1,
+        "index": 478
+      }
+    ],
+    "analytics.json": [
+      {
+        "id": "0f2d100d-146f-4002-a709-d4fd04aff996",
+        "line": 1,
+        "version": 1,
+        "index": 0
+      }
+    ]
+  }
+}

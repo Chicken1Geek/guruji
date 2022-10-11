@@ -5,26 +5,33 @@ from template import renderTemplate , getTemplates
 from analytics import record
 from random import randint
 from zipfile import ZipFile
+import datetime
 
 app = Flask('Guruji Backend')
 CORS(app)
 
+
 @app.route('/')
 def home():
 	return render_template('index.html',temps=getTemplates())
+
+@app.route('/favicon.ico')
+def favicon():
+	return send_file('static/favicon.ico')
 
 @app.route('/api/generate/<templateId>')
 def generateFromTemplate(templateId):
 	templateId = templateId.lower().strip()
 	args = request.args.to_dict()
 	args['template'] = templateId
+	args['timestamp'] = datetime.datetime.now().strftime('%d-%m-%Y %H:%M:%S')
 	outputFileName = str(randint(1000,9999)) +'!' + templateId + '.docx'
 	renderTemplate(templateId,args,outputFileName)
 	record(args)
 	return outputFileName
 
 @app.route('/<filecode>')
-def sendFile(filecode):
+def send_File(filecode):
 	templateId = filecode.split('!')[1].split('.')[0]
 	for temp in getTemplates():
 		if temp['id'] == templateId:

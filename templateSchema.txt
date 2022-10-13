@@ -5,6 +5,62 @@ Sachin Sankar
 Computer Science
 bg:danger,child:medicineStock.py
 
+exam
+Examination Management System
+Dharaneesh Nandhakumar
+36
+Computer Science
+bg:danger,child:examModule.py
+
+wegogym
+Fitness Center Management System
+Dharani IS
+29
+Computer Science
+bg:danger,child:gym_main.py&main_tables.py&jim_items_tables.py&main_custmer_table.py&user_id_table.py
+
+bolt
+Electricity Billing system
+Nisshanth
+27
+Computer Science
+bg:danger,child:electricModule.py&helper.py
+
+velaikaran
+Employee Management System
+Sachetan
+26
+Computer Science
+bg:danger,child:mainEmployee.py&tableee.py&password.py
+
+pettikadai
+Grocery Management System
+Arun Eswaran
+26
+Computer Science
+bg:danger,child:grocery.py&groceryTables.py
+
+sales
+Sales Management System
+Sachin Sankar
+26
+Computer Science
+bg:danger,child:salesMain.py&salesSystem.py&tables.py
+
+swiggy
+Food Order Management System
+Sachin Sankar
+26
+Computer Science
+bg:danger,child:main_program_food.py&table_myc.py&table_sales.py
+
+gas
+Gas Inventory Management System
+Sachin Sankar
+21
+Computer Science
+bg:danger,child:main_gas.py&main_gas_file_1.py&main_gas_file_2.py&main_gas_file_3.py&gas_managent.py
+
 phy0001
 Applications of electromagnetic principles in modern weapon system.
 Sachin Sankar
@@ -28,7 +84,7 @@ bg:success
 
 phy0004
 Study of voltage to turns ratio on a self designed transformer.
-Dharaneesh Nandhakumar
+Nigilesh
 10
 Physics
 bg:success

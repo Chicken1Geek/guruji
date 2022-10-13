@@ -6,6 +6,7 @@ from analytics import record
 from random import randint
 from zipfile import ZipFile
 import datetime
+import checks
 
 app = Flask('Guruji Backend')
 CORS(app)
@@ -14,6 +15,10 @@ CORS(app)
 @app.route('/')
 def home():
 	return render_template('index.html',temps=getTemplates())
+	
+@app.route('/new')
+def newTheme():
+	return render_template('index-new.html',temps=getTemplates())
 
 @app.route('/favicon.ico')
 def favicon():

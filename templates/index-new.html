@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guruji</title>
+    <link rel="stylesheet" href="static/bootstrap.css">
+    <link rel="stylesheet" href="static/styles.css">
+    <script src="static/script.js"></script>
+</head>
+
+<body class="bg-beauty">
+    <div class="bg-transparent text-center">
+        <img src="static/logoEdited.png" class="m-0" width="250">
+    </div>
+    <div class="m-3 row bg-transparent">
+        <div class="card col border-0 bg-transparent">
+            <div class="card-body">
+                <br>
+                <div class=" bg-white border rounded shadow-lg p-4">
+                    <div class="card-title h4">
+                        Your Details
+                    </div>
+                    <div class="input-group input-group">
+                        <span class="input-group-text">Name</span>
+                        <input type="text" class="form-control" id="nameField">
+                    </div>
+                    <div class="row">
+                        <div class="input-group mt-2 col">
+                            <span class="input-group-text">Class</span>
+                            <input type="text" class="form-control" id="classField">
+                        </div>
+                        <div class="input-group mt-2 col">
+                            <span class="input-group-text">Section</span>
+                            <input type="text" class="form-control" id="sectionField">
+                        </div>
+                    </div>
+                    <div class="container text-start mt-2">
+                        <span class="text-muted small">Recheck the spellings again. Just to be safe.</span>
+                    </div>
+                    <hr>
+                    <div class="container mt-3">
+                        <div class="input-group">
+                            <span class="input-group-text">Project Id</span>
+                            <input type="text" class="form-control" id="projectField">
+                        </div>
+                        <span class="text-muted small">You can find the project id in the <span class="text-primary">blue box</span> in each project</span>
+                        <div>
+                            <button class="btn btn-success mt-2" id="genBtn" onclick="generate()">Generate Project ✍️</button>
+                        </div>
+                        <div class="alert alert-secondary mt-2 visually-hidden" id="inprogress">
+                            <span class="spinner-border spinner-border-sm"></span>
+                            <span>Generating your project.</span>
+                        </div>
+                        <div class="alert alert-danger mt-2 visually-hidden" id="error">
+                            <b>Can't generate project.</b><br>
+                            <span>You have entered a project id that doesn't exist 🤔. Recheck that and try again.</span>
+                        </div>
+                        <div class="alert alert-success mt-2 visually-hidden" id="success">
+                            <b>Project generated 👍</b> <br>
+                            <button class="btn btn-success" onclick="download()">Download now</button> <br>
+                            Clicking the button will open a new tab.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card col m-3 border-0 bg-transparent">
+            <div class="card-body">
+                <div class="card-title h2 bg-transparent text-white">
+                    Project Templates
+                </div>
+                <div id="templatesList" style="max-height:70vh;overflow-hidden;overflow-y:scroll">
+                    {% for temp in temps %}
+                    <div class="card mb-3 border-0 rounded">
+                        <div class="card-body">
+                            <div class="card-title h6">
+                                {{temp.name}}
+                            </div>
+                            <div class="row">
+                                <span class=""></span>
+                                <span class="text-muted small">By {{temp.author}}</span>
+                            </div>
+                            <div class="row">
+                                <span class="text-muted small"> {{temp.pageCount}} pages</span>
+                            </div>
+                            <span class="badge bg-{{temp.data.bg}} h6">{{temp.tag}}</span>
+                            <span class="badge bg-primary h6">{{temp.id}}</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="text-center mt-5 pb-5">
+<br><br><br><br>
+<span class="text-light small mt-5 pt-5">@ChickenGeek<br>Writing code that matters.</span>
+</div>
+</body>
+
+</html>

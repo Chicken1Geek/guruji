@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Guruji</title>
     <link rel="stylesheet" href="static/bootstrap.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <script src="static/script.js"></script>
 </head>
 
@@ -19,7 +20,7 @@
                 <div class="card-title h4">
                     Your Details
                 </div>
-                <div class="input-group input-group">
+                <div class="input-group">
                     <span class="input-group-text">Name</span>
                     <input type="text" class="form-control" id="nameField">
                 </div>
@@ -74,13 +75,12 @@
                             <div class="card-title h6">
                                 {{temp.name}}
                             </div>
-                            <div class="row">
-                                <span class=""></span>
-                                <span class="text-muted small">By {{temp.author}}</span>
-                            </div>
-                            <div class="row">
-                                <span class="text-muted small"> {{temp.pageCount}} pages</span>
-                            </div>
+                            <span class="text-muted small">
+                                <i class="bx bx-user"></i> {{temp.author}}
+                            </span>
+                            <br>
+                            <span class="text-muted small"> <i class="bx bx-file-blank"></i> {{temp.pageCount}} pages</span>
+                            <br>
                             <span class="badge bg-{{temp.data.bg}} h6">{{temp.tag}}</span>
                             <span class="badge bg-primary h6">{{temp.id}}</span>
                         </div>
@@ -93,8 +93,8 @@
 </div>
 </div>
 <div class="text-center mt-5 pb-5">
-<br><br><br><br>
-<span class="text-muted small mt-5 pt-5">@ChickenGeek<br>Writing code that matters</span>
+<br><br>
+<span onclick="location.href='https://linktr.ee/ChickenGeek'" class="text-muted small mt-5 pt-5">@ChickenGeek<br>Writing code that matters</span>
 </div>
 </body>
 

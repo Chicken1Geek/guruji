@@ -50,7 +50,7 @@
                 </div>
                 <div class="alert alert-secondary mt-2 visually-hidden" id="inprogress">
                     <span class="spinner-border spinner-border-sm"></span>
-                    <span>Generating your project.</span>
+                    <span>Processing your request</span>
                 </div>
                 <div class="alert alert-danger mt-2 visually-hidden" id="error">
                     <b>Can't generate project.</b><br>
@@ -58,8 +58,28 @@
                 </div>
                 <div class="alert alert-success mt-2 visually-hidden" id="success">
                     <b>Project generated 👍</b> <br>
-                    <button class="btn btn-success" onclick="download()">Download now</button> <br>
-                    Clicking the button will open a new tab.
+                    <button class="btn btn-primary" id="directBtn" onclick="downloadMultiple()"><i class="bx bxs-cloud-download"></i> Direct Download</button>
+                    <button onclick="sendByEmail()" class="btn btn-primary" id="emailBtn"><i class="bx bx-mail-send"></i> Send through email</button>
+                    <p id="succText" class="visually-hidden">Click these buttons one after the other to download each of the files. Click the next one after the previous file has started downloading</p>
+                    <div id="successList" class="container visually-hidden"></div>
+                    
+                </div>
+                <div class="alert alert-info mt-3 visually-hidden" id="emailAsk">
+                  <b>Send through email</b> <br> <br>
+                  Please enter your email address to which the project files to be sent. <br>
+                  <input type="email" class="form-control" id="emailField">
+                 
+                  <button onclick="sendEmail()" class="btn btn-info mt-2 text-white"><i class="bx bx-send"></i> Send mail</button>
+                </div>
+                <div class="alert alert-success mt-2 visually-hidden" id="emailDone">
+                  <b>Email sent 👍</b> <br>
+                  <p>The email has been sent. <br>
+                  Kindly check your <b>Spam/Promotions</b> folder if u don't see the email in your inbox.
+                  </p>
+                </div>
+                <div class="alert alert-danger mt-2 visually-hidden" id="emailError">
+                  <b>Can't send email</b> <br>
+                  <p>We are having a tough time sending the email. Try again after a minute.</p>
                 </div>
             </div>
         </div>
@@ -99,3 +119,5 @@
 </body>
 
 </html>
+
+

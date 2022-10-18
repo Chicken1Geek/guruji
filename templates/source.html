@@ -1,0 +1,60 @@
+  <!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    body{
+      background-color: whitesmoke;
+     margin: 0;
+    }
+    .ml{
+      margin-left: 1rem
+    }
+    .logo{
+      width: 10rem;
+    }
+    .navBar{
+     background-color: black;
+     color: white
+    }
+ .para{
+      width: fit-content;
+      margin-left: 1rem
+    }
+    .btn{
+      border: none;
+ background-color: dodgerblue;
+ padding: 15px;
+ margin:3px;
+ border-radius: 7%;
+ font-size: 1rem;
+ color: white;
+ text-decoration: none;
+ box-shadow: 0 10 0 10 0
+    }
+  </style>
+</head>
+
+<body>
+<div class="navBar">
+  <img src="/static/logo.png" class="logo">
+</div>
+<h1 class="nameTitle ml">Source Code Download</h1>
+<p class="para ml">Here are the source code files for project <b>{{ name }}</b> download by using the buttons below. Please click each button after the previous one has done or started downloading.</p>
+<br>
+<br>
+<div class="buttonsDiv ml" >
+    {% for file in files %}
+  <a href="/cdn/{{ file }}" download="{{ file }}" class="btn">{{ file }}</a>
+  {% endfor %}
+</div>
+<br>
+<div class="ml authorPara">
+Sachin Sankar <br>
+Devloper | <a href="https://linktr.ee/ChickenGeek">@ChickenGeek</a> <br>
+</div>
+</body>
+</html>

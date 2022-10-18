@@ -7,8 +7,11 @@ authors = ["Replit user <<>>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 Flask-Cors = "^3.0.10"
-docx = "^0.2.4"
 Flask = "^2.2.2"
+python-docx = "^0.8.11"
+sib-api-v3-sdk = "^7.5.0"
+Pastebin = "^1.1.2"
+matplotlib = "^3.6.1"
 
 [tool.poetry.dev-dependencies]
 

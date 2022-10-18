@@ -21,3 +21,8 @@ def getTemplates():
 				data[i[0]] = i[1]
 			templates.append({'id':temp[0],'name':temp[1],'author':temp[2],'pageCount':temp[3],'tag':temp[4],'data':data})
 		return templates
+		
+def getTemplate(tempId):
+	for temp in getTemplates():
+		if temp['id'] == tempId:
+			return temp

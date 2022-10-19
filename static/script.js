@@ -16,7 +16,7 @@ function generate() {
     let request = new XMLHttpRequest
     request.open('get', query)
     setTimeout(()=> {
-        request.send()}, 1)
+        request.send()}, 1000)
 
     request.onload = function() {
         if (request.status != 200) {
@@ -42,7 +42,7 @@ function downloadMultiple(){
   toggle('succText')
   toggle('successList')
   for (var url in downloadUrls["data"]) {
-    let furl = baseUrl + '/' + downloadUrls["data"][url]
+    let furl = baseUrl + '/cdn/' + downloadUrls["data"][url]
     let a = document.createElement('a')
     a.href = furl
     a.download = downloadUrls["data"][url]
@@ -84,7 +84,7 @@ function remove(ele){
   if (document.getElementById('successList').childElementCount == 1){
     let doc = document.getElementById('succText')
     doc.innerHTML = 'Thank you for using guruji. The site will refresh shortly'
-    setTimeout(()=> {location.reload()},1000)
+    setTimeout(()=> {location.reload()},5000)
   }
   let element = ele
   element.remove()
